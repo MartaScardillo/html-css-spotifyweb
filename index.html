@@ -10,7 +10,7 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <body class="app debug">
+  <body class="app dbug">
     <main class="app_container">
       <aside class="sidebar"></aside>
 
@@ -41,10 +41,37 @@
         </ul>
       </div>
       <div class="toolbar_player">
-        
-        
+        <div class="player_icons">
+          <ul>
+            <li><i class="fa-solid fa-shuffle"></i></li>
+            <li><i class="fa-solid fa-backward-step"></i></li>
+            <li><i class="fa-regular fa-circle-play"></i></li>
+            <li><i class="fa-solid fa-forward-step"></i></li>
+            <li><i class="fa-solid fa-arrow-rotate-right"></i></li>
+          </ul>
+        </div>
+        <div class="player_timeline">
+          <span class="timeline_time">0.25</span>
+          <div class="line">
+            <div class="line--gray bg-lightgray"></div>
+            <div class="line--white"></div>
+          </div>
+          <span class="timeline_time">4.45</span>
+        </div>
       </div>
-      <div class="toolbar_audio"></div>
+      <div class="toolbar_audio">
+        <ul>
+          <li><i class="fa-solid fa-list-ul"></i></li>
+          <li><i class="fa-solid fa-display"></i></li>
+          <li>
+            <i class="fa-solid fa-volume-high"></i>
+            <div class="line">
+              <div class="line--gray bg-lightgray"></div>
+              <div class="line--white"></div>
+            </div>
+          </li>
+        </ul>
+      </div>
     </footer>
   </body>
 </html>
