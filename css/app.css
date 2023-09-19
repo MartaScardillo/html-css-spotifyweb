@@ -51,6 +51,10 @@ a {
     overflow: auto;
 }
 
+.sidebar {
+    width: 50px;
+}
+
 .main_container {
     flex-grow: 1;
 }
@@ -64,19 +68,24 @@ a {
 
 /* RESPONSIVE */
 
-@media (min-width: 576px;) {
+@media (min-width: 576px) {
+
+    .sidebar {
+        width: 230px;
+    }
+
+}
+
+@media (min-width: 768px) {
+
     
 }
 
-@media (min-width: 768px;) {
+@media (min-width: 992px) {
 
 }
 
-@media (min-width: 992px;) {
-
-}
-
-@media (min-width: 1200px;) {
+@media (min-width: 1200px) {
 
 }
 
