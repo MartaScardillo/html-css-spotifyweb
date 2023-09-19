@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+ul,
+ol,
+menu {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+figure > img {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+  display: inline-block;
+}
+
+/* PALETTE COLORS */
+
+:root {
+  --dark: #000000;
+  --light-dark: #141922;
+  --gray: #282828;
+  --light-gray: #A3A3A3;
+  --light: #D2D2D2;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.app_container {
+    flex-grow: 1;
+    display: flex;
+    overflow: auto;
+}
+
+.main_container {
+    flex-grow: 1;
+}
+
+.toolbar {
+    flex-shrink: 0;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* RESPONSIVE */
+
+@media (min-width: 576px;) {
+    
+}
+
+@media (min-width: 768px;) {
+
+}
+
+@media (min-width: 992px;) {
+
+}
+
+@media (min-width: 1200px;) {
+
+}
+
+/* DEBUG */
+
+/* .debug .app {
+  border: 1px green solid;
+  padding: 20px;
+} */
+
+/* .debug .app_container {
+    border: 1px blue solid;
+    padding: 20px;
+} */
+
+.debug .main_container {
+    border: 1px pink solid;
+    padding: 20px;
+}
+
+.debug .sidebar {
+    border: 1px gold solid;
+    padding: 20px;
+}
+
+.debug .toolbar {
+    border: 1px red solid;
+    padding: 20px;
+}
+
+.debug [class^=toolbar_] {
+    border: 1px orange solid;
+    padding: 20px;
+}
