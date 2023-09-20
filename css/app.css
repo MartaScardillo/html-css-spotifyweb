@@ -69,14 +69,12 @@ a {
     display: flex;
     justify-content: space-between;
     background-color: var(--gray);
-}
-
-.toolbar_song {
-    width: 25%;
+    align-items: center;
 }
 
 .toolbar_song img {
-   width: 36px;
+   max-width: 36px;
+   min-height: 28px;
 }
 
 .toolbar_list {
@@ -94,7 +92,8 @@ a {
 
 .toolbar_player {
     width: 50%;
-    padding: 20px;
+    padding: 20px 0;
+    
 }
 
 .player_icons {
@@ -105,13 +104,18 @@ a {
 
 .player_icons > ul {
     display: flex;
-    gap: 10px;
+    gap: 25px;
+    font-size: 30px;
 }
 
 .player_timeline {
     display: flex;
-    padding: 20px;
+    padding-top: 20px;
     align-items: center;
+}
+
+.player_timeline > line {
+    min-width: 150px;
 }
 
 .line {
@@ -137,24 +141,40 @@ a {
     color: white;
     margin: 0 4px;
     align-items: center;
+    position: relative;
 }
 
 .toolbar_audio {
-    width: 25%;
     color: white;
     display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.toolbar_audio > ul {
-    display: flex;
     gap: 10px;
+    padding-right: 10px;
 }
 
 .toolbar_audio .line {
     display: inline-block;
     vertical-align: middle;
+    width: 100px;
+}
+
+.timeline_time {
+    color: white;
+}
+
+.ball {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    top: -5px;
+    left: 25%;
+    display: none;
+}
+
+.line:hover .ball {
+    display: inline-block;
 }
 
 /* RESPONSIVE */
@@ -168,6 +188,10 @@ a {
     .song_name {
         display: flex;
         gap: 5px;
+    }
+
+    .toolbar_player {
+        
     }
 
 }
