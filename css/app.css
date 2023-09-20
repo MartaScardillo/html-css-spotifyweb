@@ -42,6 +42,18 @@ a {
     background-color: var(--lightgray);
 }
 
+.bg-dark {
+    background-color: var(--dark);
+}
+
+.text-gray {
+    color: var(--lightgray);
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
 .app {
   display: flex;
   flex-direction: column;
@@ -52,7 +64,7 @@ a {
 .app_container {
     flex-grow: 1;
     display: flex;
-    overflow: auto;
+    overflow: hidden;
 }
 
 .sidebar {
@@ -63,6 +75,8 @@ a {
     flex-grow: 1;
 }
 
+/* TOOLBAR */
+
 .toolbar {
     flex-shrink: 0;
     height: auto;
@@ -70,6 +84,7 @@ a {
     justify-content: space-between;
     background-color: var(--gray);
     align-items: center;
+    overflow: hidden;
 }
 
 .toolbar_song img {
@@ -105,7 +120,7 @@ a {
 .player_icons > ul {
     display: flex;
     gap: 25px;
-    font-size: 30px;
+    font-size: 25px;
 }
 
 .player_timeline {
@@ -177,6 +192,38 @@ a {
     display: inline-block;
 }
 
+
+/* ASIDE */
+
+.sidebar {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.logo {
+    display: none;
+}
+
+.logo--small {
+    width: 30px;
+}
+
+.aside_icons {
+    padding-bottom: 10px;;
+}
+
+.download {
+    width: 15px;
+}
+
+.profile {
+    background-color: var(--lightgray);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
+
 /* RESPONSIVE */
 
 @media (min-width: 576px) {
@@ -185,13 +232,11 @@ a {
         width: 230px;
     }
 
+
+
     .song_name {
         display: flex;
         gap: 5px;
-    }
-
-    .toolbar_player {
-        
     }
 
 }
@@ -233,10 +278,10 @@ a {
 
 .debug .sidebar {
     border: 1px gold solid;
-    padding: 20px;
+    /* padding: 20px; */
 }
 
-.debug .toolbar {
+/* .debug .toolbar {
     border: 1px red solid;
     padding: 20px;
 }
@@ -254,4 +299,4 @@ a {
 .debug .player_timeline {
     border: 1px brown solid;
     padding: 20px;
-}
+} */
