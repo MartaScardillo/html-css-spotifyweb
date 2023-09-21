@@ -338,15 +338,46 @@ a {
   padding-bottom: 10px;
 }
 
+.aside_icons--active {
+  position: relative;
+}
+
+.aside_icons.active::before {
+  content: "";
+  height: 37px;
+  width: 3px;
+  background-color: greenyellow;
+  display: inline-block;
+  position: absolute;
+  bottom: 5px;
+  left: -20px;
+}
+
+.download--active {
+  position: relative;
+}
+
 .download::after {
-  width: 340px;
+  content: "";
+  height: 3px;
+  width: 200px;
   background-color: var(--lightgray);
-  height: 1px;
-  margin-top: 10px;
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  left: -5px;
 }
 
 .download_img {
   width: 15px;
+}
+
+.aside_icons--active {
+  position: relative;
+}
+
+.aside_icons.active::before {
+  
 }
 
 .profile {
