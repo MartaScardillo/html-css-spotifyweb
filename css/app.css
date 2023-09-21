@@ -28,6 +28,24 @@ a {
   display: inline-block;
 }
 
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.col-6 {
+  flex-basis: calc((100% / 12) * 6);
+}
+
+.col-8 {
+  flex-basis: calc((100% / 12) * 8);
+}
+
+.col-12 {
+  width: 100%;
+}
+
 /* PALETTE COLORS */
 
 :root {
@@ -100,7 +118,6 @@ a {
   justify-content: space-between;
   background-color: var(--gray);
   align-items: center;
-  overflow: hidden;
 }
 
 .toolbar_song img {
@@ -209,19 +226,29 @@ a {
 
 /* MAIN CONTENT */
 
-.main_content {
-  flex-grow: 1;
+.main_overflow {
+  overflow: auto;
+  height: 100%;
+  padding-top: 88px;
 }
 
-/*  */
+.main_content {
+  flex-grow: 1;
+  overflow: hidden;
+  position: relative;
+}
 
 /* HEADER */
 
 .header {
   display: flex;
-  background-color: var(--gray);
+  background-color: #090b12;
   justify-content: end;
   padding: 35px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
 }
 
 .button {
@@ -232,12 +259,55 @@ a {
   font-size: 10px;
 }
 
+/* NAV */
+
+.nav {
+  background-color: var(--lightdark);
+}
+
+.nav_content > ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 35px;
+    column-gap: 25px;
+    padding: 20px 0;
+}
+
+.nav_content ul > li {
+  font-size: 15px;
+}
+
+/* MAIN CONTAINER */
+
+.main_container {
+  background-color: var(--lightdark);
+  padding: 20px;
+}
+
+.main_title {
+  padding-bottom: 20px;
+}
+
+.main_text {
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding-top: 15px;
+}
+
+.card {
+  padding: 5px;
+}
+
 /* ASIDE */
 
 .sidebar {
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex-shrink: 0;
 }
 
 .logo {
@@ -338,12 +408,23 @@ a {
     gap: 5px;
     margin-left: 30px;
   }
+
+  .col-3 {
+    flex-basis: calc((100% / 12) * 3);
+  }
+  
 }
 
 @media (min-width: 992px) {
 }
 
 @media (min-width: 1200px) {
+
+.col-2 {
+  flex-basis: calc((100% / 12) * 2);
+}
+
+
 }
 
 /* DEBUG */
@@ -358,10 +439,10 @@ a {
     padding: 20px;
 } */
 
-.debug .main_container {
+/* .debug .main_container {
   border: 1px pink solid;
-  padding: 20px;
-}
+  
+} */
 
 /* .debug .sidebar {
   border: 1px gold solid;
@@ -386,4 +467,8 @@ a {
 .debug .player_timeline {
     border: 1px brown solid;
     padding: 20px;
+} */
+
+/* .debug .card {
+  border: 1px green solid;
 } */
