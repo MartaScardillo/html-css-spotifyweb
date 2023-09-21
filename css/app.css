@@ -301,6 +301,21 @@ a {
   padding: 5px;
 }
 
+.list-item {
+  position: relative;
+}
+
+.list-item_link.active::after {
+  content: "";
+  height: 3px;
+  width: 50px;
+  background-color: greenyellow;
+  display: inline-block;
+  position: absolute;
+  bottom: -7px;
+  left: 22px;
+}
+
 /* ASIDE */
 
 .sidebar {
