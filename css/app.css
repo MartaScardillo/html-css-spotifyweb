@@ -316,6 +316,8 @@ a {
   left: 22px;
 }
 
+.hover_img
+
 /* ASIDE */
 
 .sidebar {
@@ -331,6 +333,10 @@ a {
 
 .logo--small {
   width: 30px;
+}
+
+.user_icon {
+  width: 20px;
 }
 
 .aside_icons {
@@ -366,18 +372,12 @@ a {
   position: absolute;
   bottom: 0;
   left: -5px;
+  margin: 4px 0;
 }
 
 .download_img {
-  width: 15px;
-}
-
-.aside_icons--active {
-  position: relative;
-}
-
-.aside_icons.active::before {
-  
+  width: 30px;
+  margin-left: -2px;
 }
 
 .profile {
@@ -385,6 +385,8 @@ a {
   border-radius: 50%;
   width: 30px;
   height: 30px;
+  display: flex;
+  justify-content: center;
 }
 
 /* RESPONSIVE */
